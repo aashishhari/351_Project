@@ -8,6 +8,13 @@
 % AADT - annual average daily traffic
 % CAADT - commercial annual average daily traffic
 
+
+%% Based on
+%LSTM: https://www.mathworks.com/help/deeplearning/ug/time-series-forecasting-using-deep-learning.html
+%Data Source: https://gis-mdot.opendata.arcgis.com/maps/mdot-traffic-volume-archive/about
+
+%%
+
 %{
 data{10,1} = 0;
 for n=6:16
@@ -30,6 +37,11 @@ for n = 6:9
     data{n-5, 1} = sortrows(M, 'ID');
 end
 
-% innerjoin or ismember
+% innerjoin or ismember to further sort data.
+h = data{1};
+f = data{2};
+ismember();
+
+
 
 

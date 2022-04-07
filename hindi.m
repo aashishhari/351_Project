@@ -6,10 +6,13 @@ clips = dir(".\hindi_commonvoice\clips\*.mp3");
 
 train = intersect(string(vertcat(clips.name)), train.path);
 test = intersect(string(vertcat(clips.name)), test.path);
+train = train(1:100); % first 100 files
+test = test(1:100);
 
 for t = train'
     copyfile("./hindi_commonvoice/clips/" + t, "./HN/");
 end
+
 for t = test'
     copyfile("./hindi_commonvoice/clips/" + t, "./TestData/");
 end

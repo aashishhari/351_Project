@@ -7,6 +7,13 @@ clips = dir(".\hindi_commonvoice\clips\*.mp3");
 train = intersect(string(vertcat(clips.name)), train.path);
 test = intersect(string(vertcat(clips.name)), test.path);
 
+for t = train'
+    copyfile("./hindi_commonvoice/clips/" + t, "./HN/");
+end
+for t = test'
+    copyfile("./hindi_commonvoice/clips/" + t, "./TestData/");
+end
+
 %% Sort Speakers (dev.tsv?)
 data = readTSVData(".\hindi_commonvoice\dev.tsv");
 data.group = findgroups(data.client_id);

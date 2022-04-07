@@ -7,7 +7,6 @@ mfccCount = 14602;  % Number of MFCCs
 ENfiles = dir('./EN/*.mp3');    % English Training Files
 ENfiles = ENfiles(1:10);
 
-%%
 %fftTrain=zeros(1,samples);
 %timeTrain=zeros(1,samples);
 mfccTrain=zeros(mfccCount,1);               %create empty arrays

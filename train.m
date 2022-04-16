@@ -91,7 +91,7 @@ end
 Mdl=fitcknn(mfcctraintrimmed,trainLabels,"NumNeighbors",5);         %train model
 
 % Cleanup
-clearvars -except mfccCount Mdl
+%clearvars -except mfccCount Mdl predictors
 
 
 

@@ -42,10 +42,10 @@ deltatest=deltatest.';
 
 mfcctesttrimmed = zeros(size(TESTfiles,1),1); %empty trimmed mfcc array
 
+%% Plot Model
 for l = 1:1:predictors
     mfcctesttrimmed(:,l)=mfcctest(:,idx(l)); %populate with most important predictors
 end
 
-%% Plot Model
 predicted = predict(Mdl,mfcctesttrimmed); %predict for test array with trained model
 confusionchart(actual,predicted)    

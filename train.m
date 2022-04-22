@@ -1,6 +1,8 @@
 %% 351 Language Classification -- Trainer
 % KNN of Mel Frequency Cepstral Coefficients
 
+clc; clear; close all;
+
 mfccCount = 14602;
 
 N_train = 2; % number of files to train
@@ -76,7 +78,12 @@ for file=HNfiles'
     deltadeltaTrain=zeros(mfccCount,1);
     i = i + 1;
 end
+clear i delta1d mfcc1d deltadelta1d mfcc_coeffs delta deltadelta Y fs
+clear clear ENfiles CNfiles HNfiles
+clear ENlabels CNlabels HNlabels
 
+save("train.mat");
+%% Create Model
 mfccTrain=mfccTrain.';              %transpose matrix for training
 deltaTrain=deltaTrain.';
 
@@ -89,10 +96,3 @@ for k = 1:1:predictors
 end
 
 Mdl=fitcknn(mfcctraintrimmed,trainLabels,"NumNeighbors",5);         %train model
-
-% Cleanup
-clearvars -except mfccCount Mdl predictors idx 
-%actual predicted mfcctesttrimmed mfcctest
-
-
-

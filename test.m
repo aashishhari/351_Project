@@ -1,7 +1,9 @@
 %% 351 Language Classification -- Tester
 % KNN of Mel Frequency Cepstral Coefficients
 
+N_test = 10;
 TESTfiles = dir('./TestData/*.mp3');
+TESTfiles = TESTfiles(1:N_test);
 
 %TESTfiles = TESTfiles(1:N_train);
 
@@ -37,15 +39,20 @@ for file = TESTfiles'                               %concatenate test audio
     j=j+1;
 end
 
+save("test.mat");
+%% Generate Predictions & Plot
 mfcctest=mfcctest.'; %transpose
 deltatest=deltatest.';
 
 mfcctesttrimmed = zeros(size(TESTfiles,1),1); %empty trimmed mfcc array
 
-%% Plot Model
+% Cleanup
+%clearvars -except mfccCount Mdl predictors idx % train
+%clearvars -except predictors mfcctesttrimmed mfcctest idx Mdl actual predicted
+
 for l = 1:1:predictors
     mfcctesttrimmed(:,l)=mfcctest(:,idx(l)); %populate with most important predictors
 end
 
 predicted = predict(Mdl,mfcctesttrimmed); %predict for test array with trained model
-confusionchart(actual,predicted)    
+confusionchart(actual,predicted)  

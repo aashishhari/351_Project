@@ -39,10 +39,13 @@ In this ZIP:
 
 /Testfiles/ - .mp3 files for predicting (all 3 languages)
 
-- LoadTestingData.m - Used for pre-loading all test .mp3 files
-- LoadTrainingData.m - Used for pre-loading all training .mp3 files
-- README.m - Readme file
-- Testing.m - Used for training models and predicting, outputs confusion matrix
+LoadTestingData.m - Used for pre-loading all test .mp3 files
+
+LoadTrainingData.m - Used for pre-loading all training .mp3 files
+
+README.m - Readme file
+
+Testing.m - Used for training models and predicting, outputs confusion matrix
 
 ## Contributors
 Aashish Harikrishnan, Daniel Li, Andrew Lyandar, Shantanu Purandare

@@ -18,7 +18,7 @@ train.m:
 
 
 ## Contributors
-Aashish Harikrishnan
-Daniel Li
-Andrew Lyandar
-Shantanu Purandare
+- Aashish Harikrishnan
+- Daniel Li
+- Andrew Lyandar
+- Shantanu Purandare

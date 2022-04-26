@@ -8,17 +8,17 @@ Here, we extract MFCC features and pitch, and next apply a machine learning algo
 
 ## What's in this repo?
 
-Demo Files:
+**demo.m** - This file takes a short bit to run, but takes the results generated from `loadTestingData.m` and `loadTrainingData.m` and computes a KNN model for the data **using** the relieff function 
 
-PitchAnalysis.m:
+**demo_lite.m** - T
 
-testing.m:
+**PitchAnalysis.m** - 
 
-train.m:
+**testing.m:** - 
+
+**loadTestingData.m:** - 
+
+**loadTrainingData.m:** - 
 
 
-## Contributors
-- Aashish Harikrishnan
-- Daniel Li
-- Andrew Lyandar
-- Shantanu Purandare
+> Contributors: Aashish Harikrishnan, Daniel Li, Andrew Lyandar, Shantanu Purandare

@@ -14,7 +14,7 @@ Here, we extract MFCC features and pitch, and next apply a machine learning algo
 
 **PitchAnalysis.m** - This file extracts the Pitch features of the audio samples.
 
-**testing.m:** - This file is the original script of `demo.m` and uses the workspace variables generated from 'loadTestingData.m` and `loadTrainingData.m` instead of using a pre-generated dataset.
+**testing.m:** - This file is the original script of `demo.m` and uses the workspace variables generated from `loadTestingData.m` and `loadTrainingData.m` instead of using a pre-generated dataset.
 
 **loadTrainingData.m:** - This file loads in the train mp3 audio files used for training and does some preprocessing (normalization, mfcc extraction).
 

@@ -20,6 +20,29 @@ Here, we extract MFCC features and pitch, and next apply a machine learning algo
 
 **loadTestingData.m:** - This file does the same as above but using the test mp3 files.
 
+## ZIP file
+The corresponding datasets can be found in our ZIP file. The structure of the ZIP is indicated below:
 
+In this ZIP:
 
-> Contributors: Aashish Harikrishnan, Daniel Li, Andrew Lyandar, Shantanu Purandare
+/CN/ - Training .mp3 files (Mandarin)
+
+/Demo/ - Directory for demos and relevant data
+- ||-> Demo.m - Project demo (includes relieff computation)
+- ||-> Demo_lite.m - Project demo (loads pre-calculated relieff output)
+- ||-> trainedMdl_demo.mat - Data loaded by Demo.m
+- ||-> trainedMdl_demo_lite.mat - Data loaded by Demo_lite.m
+
+/EN/ - Training .mp3 files (English)
+
+/HN/ - Training .mp3 files (Hindi)
+
+/Testfiles/ - .mp3 files for predicting (all 3 languages)
+
+- LoadTestingData.m - Used for pre-loading all test .mp3 files
+- LoadTrainingData.m - Used for pre-loading all training .mp3 files
+- README.m - Readme file
+- Testing.m - Used for training models and predicting, outputs confusion matrix
+
+## Contributors
+Aashish Harikrishnan, Daniel Li, Andrew Lyandar, Shantanu Purandare

@@ -8,17 +8,18 @@ Here, we extract MFCC features and pitch, and next apply a machine learning algo
 
 ## What's in this repo?
 
-**demo.m** - This file takes a short bit to run, but takes the results generated from `loadTestingData.m` and `loadTrainingData.m` and computes a KNN model for the data **using** the relieff function 
+**demo.m** - This file takes a short bit to run, ~90seconds, but reads the pre-generated results from `loadTestingData.m` and `loadTrainingData.m` and computes a KNN model for the data **using** the relieff function. Additionally, it generates a bar graph and two confusion charts.
 
-**demo_lite.m** - T
+**demo_lite.m** - This file is the same and produces the same output plots/results, but **does not** use the relieff function and therefore the runtime is shorter, a few seconds.
 
-**PitchAnalysis.m** - 
+**PitchAnalysis.m** - This file extracts the Pitch features of the audio samples.
 
-**testing.m:** - 
+**testing.m:** - This file is the original script of `demo.m` and uses the workspace variables generated from 'loadTestingData.m` and `loadTrainingData.m` instead of using a pre-generated dataset.
 
-**loadTestingData.m:** - 
+**loadTrainingData.m:** - This file loads in the train mp3 audio files used for training and does some preprocessing (normalization, mfcc extraction).
 
-**loadTrainingData.m:** - 
+**loadTestingData.m:** - This file does the same as above but using the test mp3 files.
+
 
 
 > Contributors: Aashish Harikrishnan, Daniel Li, Andrew Lyandar, Shantanu Purandare

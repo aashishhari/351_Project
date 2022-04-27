@@ -26,6 +26,8 @@ The corresponding datasets can be found in our ZIP file. The structure of the ZI
 In this ZIP:
 
 /CN/ - Training .mp3 files (Mandarin)
+||-> audioNormalization_YW.m - Normalization code, courtesy Yi-Wen Chen (https://www.mathworks.com/matlabcentral/fileexchange/69958-audio-normalization-by-matlab)
+||-> .mp3 files
 
 /Demo/ - Directory for demos and relevant data
 - ||-> Demo.m - Project demo (includes relieff computation)
@@ -34,10 +36,16 @@ In this ZIP:
 - ||-> trainedMdl_demo_lite.mat - Data loaded by Demo_lite.m
 
 /EN/ - Training .mp3 files (English)
+||-> audioNormalization_YW.m - Normalization code, courtesy Yi-Wen Chen (https://www.mathworks.com/matlabcentral/fileexchange/69958-audio-normalization-by-matlab)
+||-> .mp3 files
 
 /HN/ - Training .mp3 files (Hindi)
+||-> audioNormalization_YW.m - Normalization code, courtesy Yi-Wen Chen (https://www.mathworks.com/matlabcentral/fileexchange/69958-audio-normalization-by-matlab)
+||-> .mp3 files
 
 /Testfiles/ - .mp3 files for predicting (all 3 languages)
+||-> audioNormalization_YW.m - Normalization code, courtesy Yi-Wen Chen (https://www.mathworks.com/matlabcentral/fileexchange/69958-audio-normalization-by-matlab)
+||-> .mp3 files
 
 LoadTestingData.m - Used for pre-loading all test .mp3 files
 
